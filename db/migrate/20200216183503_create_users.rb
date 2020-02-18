@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
 
       t.string :username, null: false
       t.string :name, default: '', null: false
-      t.bigint :account_balance, default: 0, null: false
+      t.float :account_balance, default: 0, null: false
 
       t.timestamps
     end

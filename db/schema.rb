@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_183837) do
   create_table "transactions", force: :cascade do |t|
     t.integer "by_user_id"
     t.integer "to_user_id"
-    t.bigint "amount", null: false
+    t.float "amount", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["by_user_id"], name: "index_transactions_on_by_user_id"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_02_16_183837) do
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
     t.string "name", default: "", null: false
-    t.bigint "account_balance", default: 0, null: false
+    t.float "account_balance", default: 0.0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["username"], name: "index_users_on_username", unique: true

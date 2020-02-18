@@ -3,7 +3,7 @@ class CreateTransactions < ActiveRecord::Migration[6.0]
     create_table :transactions do |t|
       t.references :by_user
       t.references :to_user
-      t.bigint :amount, null: false
+      t.float :amount, null: false
 
       t.timestamps
     end
