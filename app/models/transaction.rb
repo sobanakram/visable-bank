@@ -5,4 +5,6 @@ class Transaction < ApplicationRecord
   validates :amount, presence: true
   validates_numericality_of :amount, greater_than: 0
   validates :by_user_id, exclusion: { in: ->(user) { [user.to_user_id] } }
+
+  alias :from_user :by_user
 end
