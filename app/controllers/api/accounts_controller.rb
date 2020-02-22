@@ -17,7 +17,7 @@ module Api
     param :amount, Float, required: true
 
     def transfer
-      render_error('Amount should be greater then 0.', 422) && return if params[:amount].to_f <= 0
+      render_error('Amount should be greater then 0.') && return if params[:amount].to_f <= 0
 
       from_user = User.find_by_id params[:from_user_id]
       return render_error('From user not found.', 404) && return if from_user.nil?
