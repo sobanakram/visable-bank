@@ -1,7 +1,7 @@
 Apipie.configure do |config|
   config.app_name = 'Visable Bankd APIs'
   config.copyright = '&copy; 2020 Soban'
-  config.api_base_url = '/api'
+  config.api_base_url = '/api/'
   config.doc_base_url = '/api_docs'
   # where is your API defined?
   config.api_controllers_matcher = File.join(Rails.root, 'app', 'controllers', 'api', '*.rb')
