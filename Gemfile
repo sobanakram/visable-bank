@@ -33,6 +33,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 
+gem 'apipie-rails'
+
 group :development, :test do
   gem 'rspec-rails', '< 4.0.0'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
